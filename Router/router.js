@@ -27,16 +27,12 @@ const LoadContentPage = async () => {
   // Récupération de l'URL actuelle
   const actualRoute = getRouteByUrl(path);
 
-  const path = window.location.pathname;
-  // Récupération de l'URL actuelle
-  const actualRoute = getRouteByUrl(path);
-
   //Vérifier les droits d'accès à la page
   const allRolesArray = actualRoute.authorize;
 
   if(allRolesArray.length > 0){ //on vérifie si les roles sont suppérieur a 0 pour accéder aux pages, 0 correspondant a l'authorisation []
     if(allRolesArray.includes("deconnecter")){
-      if(isConnected()){
+      if(isConnecter()){
         window.location.replace("/");
       }
     }

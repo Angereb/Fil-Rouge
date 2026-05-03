@@ -16,7 +16,7 @@ function checkIdentifiants(){
         setToken(token)
 
         //placer le token en cookie
-        setCookie(RoleCookieName, "admin", 7); //Ici on défini quelle role le cookie a et combien de jour il reste actif
+        setCookie(RoleCookieName, "client", 7); //Ici on défini quelle role le cookie a et combien de jour il reste actif
         window.location.replace("/");
     }
     else{
